@@ -18,36 +18,4 @@ Margin Collapse Calculation:When two block-level elements sit stacked vertically
 
 **Engineering Thinking**
 Box-Sizing Box Fix
-When you add padding or a border to an element and it becomes wider than expected, the element is running on the historical default setting: box-sizing: content-box;. Under content-box, any padding or borders you add are added onto the outer dimensions of the element. For example, a box with a width of $300\text{px}$, padding: 10px;, and a border: 2px; will have an actual rendered width of $324\text{px}$ ($300 + 10 + 10 + 2 + 2$).The fix is to switch the element to use border-box. This forces the browser to handle padding and borders inside the declared width. A $300\text{px}$ wide element will stay exactly $300\text{px}$ wide, and the inner area for content will automatically shrink to fit.CSS/* The universal best-practice fix used in modern resets */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-Box Sizing Visualizer (CSS-Only)CSS/* Layout container to display both test boxes side-by-side */
-.visualization-container {
-  display: flex;
-  gap: 20px;
-}
-
-/* Base structural properties shared across both boxes */
-.box-model-demo {
-  width: 200px;
-  height: 100px;
-  padding: 20px;
-  border: 5px solid #000;
-  background-color: #3498db;
-}
-
-/* BOX 1: Content-Box Behavior 
-   Rendered footprint: Width = 200 + 20(left) + 20(right) + 5(left) + 5(right) = 250px.
-   The box expands beyond its declared 200px boundary. */
-.content-box-target {
-  box-sizing: content-box;
-}
-
-/* BOX 2: Border-Box Behavior 
-   Rendered footprint: Width is exactly 200px.
-   The padding and borders are contained within the boundary.
-   The remaining inner content width automatically shrinks down to 150px. */
-.border-box-target {
-  box-sizing: border-box;
-}
+When you add padding or a border to an element and it becomes wider than expected, the element is running on the historical default setting: box-sizing: content-box;. Under content-box, any padding or borders you add are added onto the outer dimensions of the element. For example, a box with a width of $300\text{px}$, padding: 10px;, and a border: 2px; will have an actual rendered width of $324\text{px}$ ($300 + 10 + 10 + 2 + 2$).The fix is to switch the element to use border-box. This forces the browser to handle padding and borders inside the declared width. A $300\text{px}$ wide element will stay exactly $300\text{px}$ wide, and the inner area for content will automatically shrink to fit.CSS/* The universal best-practice fix used in modern resets 

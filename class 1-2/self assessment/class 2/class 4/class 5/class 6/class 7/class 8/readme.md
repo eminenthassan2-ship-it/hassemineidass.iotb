@@ -19,20 +19,6 @@ Design System Consistency: Tailwind locks our layout choices to a unified spacin
 **Engineering Thinking**
 Multi-Context Interactive Component Card
 Here is an interactive card component built with Tailwind CSS that responds to different application states:
-
-HTML
-<div class="p-6 bg-white rounded-xl border border-slate-200 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl">
-  <span class="text-xs font-semibold text-indigo-600 uppercase">Standard Article</span>
-  <h3 class="mt-2 text-xl font-bold text-slate-900">Tailwind Engineering Optimization</h3>
-  <p class="mt-1 text-slate-600">Discover the power of utility-first workflows...</p>
-</div>
-
-<div class="p-6 bg-gradient-to-br from-indigo-50 to-white rounded-xl border-2 border-indigo-500 shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden">
-  <div class="absolute top-0 right-0 px-3 py-1 text-xs font-bold text-white bg-indigo-600 rounded-bl-lg">FEATURED</div>
-  <span class="text-xs font-semibold text-indigo-700 uppercase">Premium Guide</span>
-  <h3 class="mt-2 text-xl font-bold text-slate-900">Advanced Engine Deep Dive</h3>
-  <p class="mt-1 text-slate-600">Master the intricate mechanics of browser layout execution...</p>
-</div>
 Implementation Analysis:
 
 transition-all duration-300 ease-in-out: Smoothly animates properties when states change.

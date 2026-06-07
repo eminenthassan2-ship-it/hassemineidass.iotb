@@ -1,6 +1,6 @@
 # Class 1: Web Ecosystem
 Class 01: The 2026 Web Ecosystem
-### 📐 Theory
+###  Theory
 #### Browser Rendering Pipeline
 When a browser receives a raw stream of HTML bytes from a network or cache, it executes a highly optimized, multi-step pipeline to convert those characters into interactive pixels on a screen.
 1. **DOM Tree Construction:** The browser tokens and parses the incoming HTML bytes, turning tags into discrete node objects arranged in a parent-child tree structure called the Document Object Model (DOM).
@@ -12,7 +12,7 @@ When a browser receives a raw stream of HTML bytes from a network or cache, it e
 **Why this matters to a developer:**Understanding this pipeline moves a developer away from guessing and toward predictable, performance-driven engineering. If you dynamically update a property like `width` or `top` via JavaScript, you force the browser to execute the entire pipeline from the **Layout** stage onward, causing expensive recalculations (reflows). However, if you change properties like `transform` or `opacity`, the browser bypasses Layout and Paint entirely, jumping straight to **Composite** via the GPU. Knowing how the browser engine thinks is the foundation of building smooth, 60fps user experiences.
 ---
 
-### 🧠 Product Thinking
+###  Product Thinking
 
 #### Chef's Blog SEO Strategy
 Semantic HTML gives explicit meaning to raw text, turning an ambiguous document into a clear, structured database that search engine crawlers can easily parse. Here is how we apply it to a high-traffic chef's blog:

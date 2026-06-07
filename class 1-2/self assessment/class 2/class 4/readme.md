@@ -35,38 +35,7 @@ The Trade-Off: Custom dropdowns require significant development effort. You must
 Accessible Password Component
 This accessible component features an integrated strength indicator, a dynamic requirements checklist, and a secure show/hide visibility toggle:
 
-HTML
-<div class="password-field-container">
-  <label for="user-password">Account Password</label>
-  <div class="input-wrapper">
-    <input 
-      type="password" 
-      id="user-password" 
-      required 
-      aria-describedby="password-constraints strength-meter"
-      autocomplete="new-password"
-    >
-    <button 
-      type="button" 
-      id="toggle-visibility" 
-      aria-live="polite"
-      title="Show password text"
-    >
-      Show
-    </button>
-  </div>
 
-  <div id="strength-meter" role="meter" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4">
-    <div class="meter-bar"></div>
-  </div>
-
-  <ul id="password-constraints" aria-label="Password requirements">
-    <li id="req-length" aria-invalid="true">Minimum 8 characters</li>
-    <li id="req-alpha" aria-invalid="true">At least one uppercase letter</li>
-    <li id="req-num" aria-invalid="true">At least one numerical digit</li>
-    <li id="req-spec" aria-invalid="true">At least one special symbol (@, #, $, etc)</li>
-  </ul>
-</div>
 Accessibility Implementation Details:
 
 The input uses aria-describedby to explicitly link both the requirements checklist and the real-time strength meter directly to the screen reader's focus context.
