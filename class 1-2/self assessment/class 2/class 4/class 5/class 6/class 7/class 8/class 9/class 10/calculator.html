@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="calculator-wrap">
+      <h1>Simple Calculator</h1>
+      <div class="calculator">
+        <input id="display" class="display" type="text" readonly aria-label="Calculator display" />
+        <div class="keys">
+          <button id="clear" class="btn action">C</button>
+          <button id="del" class="btn action">DEL</button>
+          <button class="btn operator" data-op="sqrt">√</button>
+          <button class="btn operator" data-op="divide">÷</button>
+
+          <button class="btn digit">7</button>
+          <button class="btn digit">8</button>
+          <button class="btn digit">9</button>
+          <button class="btn operator" data-op="multiply">×</button>
+
+          <button class="btn digit">4</button>
+          <button class="btn digit">5</button>
+          <button class="btn digit">6</button>
+          <button class="btn operator" data-op="subtract">−</button>
+
+          <button class="btn digit">1</button>
+          <button class="btn digit">2</button>
+          <button class="btn digit">3</button>
+          <button class="btn operator" data-op="add">+</button>
+
+          <button class="btn digit">0</button>
+          <button id="decimal" class="btn">.</button>
+          <button class="btn operator" data-op="power">^</button>
+          <button id="equals" class="btn equal">=</button>
+        </div>
+      </div>
+
+      
+    </main>
+
+    <script src="script.js"></script>
+    <script src="script-ui.js"></script>
+  </body>
+</html>
